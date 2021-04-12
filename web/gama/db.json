@@ -1,0 +1,14 @@
+{
+  "theme":{
+    "colors":{
+      "primary": "#E4C558",
+      "secondary": "#383736",
+      "contrastWhite": "#FCF9EE",
+      "lightBlue": "#94B3E1",
+      "hoverBlue": "#285FB1",
+      "lightRed": "#E28B8B",
+      "hoverRed": "#C22B2B",
+      "bgRed": "#DA5656"
+      }
+    }
+  }
