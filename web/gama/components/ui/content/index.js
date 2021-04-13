@@ -8,13 +8,17 @@ const Content = styled.div`
   display: flex;
   flex-flow: column wrap;
   :nth-child(n){
-    padding-top:40px;
+    
     padding-bottom:40px;
+  }
+  @media (max-width:620px){
+    margin-top: 150px;
   }
 `
 Content.h2 = styled.h2`
   display: flex;
   justify-content: center;
+  
 `
 Content.section = styled.section`
   padding-top: 35px;
