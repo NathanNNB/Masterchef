@@ -1,0 +1,28 @@
+.quote{
+  font-size: 30px;
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  padding-top:20px;
+  @media (max-width:990px){
+    font-size: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .author{
+    padding-top: 10px;
+    font-size: 30px;
+    font-style: italic;
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    @media (max-width:990px){
+      font-size: 20px;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

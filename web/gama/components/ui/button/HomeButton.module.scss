@@ -1,0 +1,30 @@
+.homeButton{
+  display: flex;
+  justify-content: center;
+  background-color: var(--contrastWhite);
+  color: var(--secondary);
+  border-radius: 25px;
+  border: solid 1px var(--secondary);
+  width: 250px;
+  height: 80px;
+  padding: 20px ;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: .3s;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--secondary);
+  }
+
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+  }
+}
