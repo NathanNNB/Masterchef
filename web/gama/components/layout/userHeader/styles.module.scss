@@ -1,0 +1,53 @@
+.header{
+  background-color: var(--secondary); 
+  width: 100%;
+  height: 94px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  
+  @media (max-width: 620px){
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+    position: fixed;
+    
+  }
+
+  
+
+  section{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    @media (max-width: 620px){
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  
+}
+
+.buttonIcon{
+  color: var(--contrastWhite);
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,141 @@
+.reviewContainer{
+  
+  margin-top: 20px;
+  background-color: var(--secondary);
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  height: auto;
+  .reviewLine{
+    width: 90%;
+    background-color: var(--contrastWhite);
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+  .reviewHeader{
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    .authorSection{
+      display: flex;
+      justify-content: center;
+
+      .authorImage{
+        border-radius: 100%;
+        width: 6.25rem;
+        height: 6.25rem;
+        border: solid 2px var(--contrastWhite);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .authorName{
+        margin-left: 15px ;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: var(--contrastWhite);
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .reviewRate{
+      color: var(--primary);
+      display: flex;
+      justify-content: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 2rem ;
+      margin-left: auto;
+    }
+  }
+
+  .reviewBody{
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .imageSection{
+      width: 25%;
+      margin-right: auto;
+      margin-bottom: auto;
+      .itemImage{
+        border-radius: 100%;
+        width: 6.25rem;
+        height: 6.25rem;
+        border: solid 2px var(--contrastWhite);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .reviewTextSection{
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      .itemTitle{
+        color: var(--contrastWhite);
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      .reviewText{
+        color: var(--contrastWhite);
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .reviewFooter{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    .likeSection{
+      display: flex;
+      margin-right: auto;
+      margin-left: 3px;
+
+      .like{
+        color: var(--bgRed);
+        width: 2rem;
+        height: 2rem;
+        margin-right: 5px;
+      }
+
+      .likeNumbers{
+        color: var(--bgRed);
+        font-size: 2rem;
+
+      }
+
+      
+    }
+
+    .comments{
+      font-size: 1.5rem;
+      color: var(--contrastWhite);
+      margin-right: 3rem;
+    }
+  }
+
+}

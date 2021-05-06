@@ -1,14 +1,13 @@
 import {useRef} from 'react';
-
 import styles from './styles.module.scss';
 import { signIn} from 'next-auth/client';
-
+import {useRouter} from 'next/router';
 
 export default function LoginForm() {
   
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
-
+  const router = useRouter();
   async function submitHandler(event){
 
     event.preventDefault();
@@ -21,9 +20,10 @@ export default function LoginForm() {
       email: enteredEmail,
       password: enteredPassword,
     });
-
+    const path = (`/profile/${enteredEmail}`)
+    router.push(path);
     console.log(result);
-
+    
   }
 
   return (
