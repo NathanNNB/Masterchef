@@ -3,13 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavButton from '../../ui/button/NavButton';
 import styles from './styles.module.scss';
+import { useRouter } from 'next/router'
 import {signOut} from 'next-auth/client';
 import {FaUserAlt} from "react-icons/fa";
 import {FaCog} from "react-icons/fa";
 import {FaPlus} from "react-icons/fa";
 
 export default function UserHeader() {
-  
+  const router = useRouter();
+  const {user} = router.query;
+  const itemRegisterURL = `/profile/${user}/itemRegister`;
   function logoutHandler(){
     signOut();
   }
@@ -19,7 +22,7 @@ export default function UserHeader() {
     <div className={styles.header}>
 
       <section>
-        <Link href="/">
+        <Link href='/'>
           <a>
             <Image
               src="/img/Logo.png" width={110} height={31.5}
@@ -32,17 +35,27 @@ export default function UserHeader() {
         
       
         <section>
-          <FaPlus className={styles.buttonIcon}/>
+          <Link href={itemRegisterURL}>
+            <a>
+            
+            <FaPlus className={styles.buttonIcon}/>
+            </a>
+          </Link>
         </section>
 
         
         <section>
-          <FaCog className={styles.buttonIcon}/>
+          <a>
+
+           <FaCog className={styles.buttonIcon}/>
+          </a>
         </section>
 
         
         <section>
-          <FaUserAlt className={styles.buttonIcon}/>
+          <a>  
+           <FaUserAlt className={styles.buttonIcon}/>
+          </a>
         </section>
 
         

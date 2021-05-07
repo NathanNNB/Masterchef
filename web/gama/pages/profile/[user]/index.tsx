@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import UserProfile from '../../components/profile/user-profile';
-import Footer from '../../components/layout/footer';
-import UserHeader from '../../components/layout/userHeader';
+import UserProfile from '../../../components/profile/user-profile';
+import Footer from '../../../components/layout/footer';
+import UserHeader from '../../../components/layout/userHeader';
 import {getSession} from 'next-auth/client'
 import {useRouter} from 'next/router'
 const Profile: React.FC = () => {
