@@ -139,6 +139,8 @@ export default function SignupForm() {
           </div>
           <div className={styles.control}>
             <label > *Senha deve possuir ao menos 8 caracteres</label>
+            <label > *Por questões de segurança, evite criar uma senha parecida com seu email ou nome</label>
+
           </div>
           <div className={styles.control}>
             <button className={styles.formButton} type='submit'> Confirmar </button>
