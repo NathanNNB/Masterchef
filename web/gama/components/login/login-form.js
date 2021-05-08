@@ -2,7 +2,6 @@ import {useRef} from 'react';
 import styles from './styles.module.scss';
 import { signIn} from 'next-auth/client';
 import {useRouter} from 'next/router';
-
 export default function LoginForm() {
   
   const emailInputRef = useRef(null);
@@ -14,7 +13,7 @@ export default function LoginForm() {
 
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
-    
+
     const result = await signIn('credentials', {
       redirect: false,
       email: enteredEmail,
@@ -23,7 +22,7 @@ export default function LoginForm() {
     const path = (`/profile/${enteredEmail}`)
     router.push(path);
     console.log(result);
-    
+
   }
 
   return (

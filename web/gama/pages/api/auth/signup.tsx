@@ -14,7 +14,7 @@ async function handler(req,res){
       !username
       ) {
       res.status(422).json(
-        {message: 'invalid input, password should also be at least 7 characters long.'
+        {message: 'A senha deve possuir ao menos 8 caracteres.'
       });
       return;
     }

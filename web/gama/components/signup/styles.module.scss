@@ -5,20 +5,20 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 75px;
-  height: 500px;
+  height: 550px;
   background-color: var(--contrastWhite);
   border: 2px solid var(--secondary);
 
   @media (max-width: 840px){
     width: 500px;
-    height: 500px;
+    height: 550px;
     
   }
 
   @media (max-width: 520px){
     margin-top: 45px;
     width: 350px;
-    height: 500px;
+    height: 550px;
     
   }
 
@@ -34,6 +34,7 @@
     
   }
   input{
+    font-size: 1.2rem;
     width: 400px;
     padding: 12px;
     border: 1px solid var(--secondary);
@@ -45,6 +46,24 @@
       
     }
   }
+  select{
+    text-align-last:center;
+    font-size: 1.1rem;
+    width: 400px;
+    padding: 12px;
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    @media (max-width: 520px){
+      width: 250px;
+      
+    }
+    option{
+      font-size: 0.85rem;
+    }
+  }
+  
 }
 
 .controls{

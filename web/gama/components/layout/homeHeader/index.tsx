@@ -28,22 +28,19 @@ export default function HomeHeader() {
       </section>
       
       <nav>
-        {!session &&(
           <section>
             <NavButton text='Entrar' link='/login'/>
           </section>
-        )}
-        {!session && (
+        
+        
           <section>
             <NavButton text='Registrar-se' link='/signup'/>
           </section>
 
-        )}
         
-        {session && 
-        <section>
-          <NavButton text='Perfil' link='/signup'/>
-        </section>}
+        
+        
+      
 
         {session && 
         <section>
