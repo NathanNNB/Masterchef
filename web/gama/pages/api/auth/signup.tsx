@@ -24,6 +24,12 @@ async function handler(req,res){
     
     const existingUser = await db.collection('users').findOne({email: email});
 
+    if(uf === 'null'){
+      res.status(422).json({message: 'Selecione um estado'})
+      client.close();
+      return
+    }
+
     if (existingUser){
       res.status(422).json({message: 'User exists already'})
       client.close();

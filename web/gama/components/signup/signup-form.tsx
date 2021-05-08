@@ -101,7 +101,8 @@ export default function SignupForm() {
           <div className={styles.control}>
             <label htmlFor='text'></label>
             <select placeholder='Estado' id='UF' required  ref={ufInputRef}>
-              <option value="EX">Estrangeiro</option>
+              <option value="null">Selecione seu estado</option>
+              <option value="Ex">Estrangeiro</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
               <option value="AP">Amapá</option>
