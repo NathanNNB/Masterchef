@@ -114,7 +114,7 @@ const FilmeForm: React.FC = () => {
             </div>
             <div className={styles.control}>
               <label htmlFor='text'>Descreva o filme: </label>
-              <textarea rows='5' id='descriptionFilme' required ref={descriptionIFilmeInputRef}></textarea>
+              <textarea rows={5} id='descriptionFilme' required ref={descriptionIFilmeInputRef}></textarea>
             </div>
             <div className={styles.control}>
                 <button className={styles.formButton} type='submit'> Confirmar </button>

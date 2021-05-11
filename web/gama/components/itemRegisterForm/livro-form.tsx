@@ -97,7 +97,7 @@ export default function LivroForm() {
             </div>
             <div className={styles.control}>
               <label htmlFor='text'>Descreva o livro: </label>
-              <textarea rows='5' id='descriptionLivro' required ref={descriptionLivroInputRef}></textarea>
+              <textarea rows={5} id='descriptionLivro' required ref={descriptionLivroInputRef}></textarea>
             </div>
             <div className={styles.control}>
                 <button className={styles.formButton} type='submit'> Confirmar </button>

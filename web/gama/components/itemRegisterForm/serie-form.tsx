@@ -111,7 +111,7 @@ const SerieForm: React.FC = () => {
             </div>
             <div className={styles.control}>
               <label htmlFor='text'>Descreva a série: </label>
-              <textarea rows='5' id='descriptionSerie'  ref={descriptionISerieInputRef}></textarea>
+              <textarea rows={5} id='descriptionSerie'  ref={descriptionISerieInputRef}></textarea>
             </div>
             <div className={styles.control}>
                 <button className={styles.formButton} type='submit'> Confirmar </button>
