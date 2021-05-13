@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styles from './styles.module.scss'
+import Notification from '../ui/notification';
 
 
 async function createLivro(
@@ -72,12 +73,44 @@ export default function LivroForm() {
     console.log(enteredDescriptionLivro)
   }
 
+  
+  let notification ;
+  
+
+  if(requestStatus === 'success'){
+    notification={
+      status:'success',
+      title: 'Sucesso',
+      message: 'Cadastro realizado ',
+    };
+  }
+
+  if(requestStatus === 'error'){
+    notification={
+      status:'error',
+      title: 'Error',
+      message: requestError,
+    };
+  }
+
+  if(requestStatus === 'pending'){
+    notification={
+      status:'pending',
+      title: 'Sending message',
+      message: 'Processing...',
+    };
+  }
+  console.log(requestStatus)
+
   return (
     <div className={styles.container}>
+          
           <form className={styles.itemRegisterForm} onSubmit={submitHandler}>
+            
             <span>Registrar novo item:</span>
 
             <span>Livro </span>
+            
             
             <div className={styles.control}>
               <label htmlFor='text'></label>
@@ -99,10 +132,19 @@ export default function LivroForm() {
               <label htmlFor='text'>Descreva o livro: </label>
               <textarea rows={5} id='descriptionLivro' required ref={descriptionLivroInputRef}></textarea>
             </div>
+            
             <div className={styles.control}>
                 <button className={styles.formButton} type='submit'> Confirmar </button>
               </div>
           </form>
+          {notification && 
+          <Notification
+            status={notification.status}
+            title={notification.title}
+            message={notification.message}
+          />}
+          
+          
         </div>
   )
 }

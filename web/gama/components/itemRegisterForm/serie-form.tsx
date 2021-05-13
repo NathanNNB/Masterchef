@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styles from './styles.module.scss';
+import Notification from '../ui/notification';
 
 
 async function createSerie(
@@ -78,6 +79,34 @@ const SerieForm: React.FC = () => {
     console.log(enteredDescriptionSerie)
   }
 
+
+  let notification ;
+  
+
+  if(requestStatus === 'success'){
+    notification={
+      status:'success',
+      title: 'Sucesso',
+      message: 'Cadastro realizado ',
+    };
+  }
+
+  if(requestStatus === 'error'){
+    notification={
+      status:'error',
+      title: 'Error',
+      message: requestError,
+    };
+  }
+
+  if(requestStatus === 'pending'){
+    notification={
+      status:'pending',
+      title: 'Sending message',
+      message: 'Processing...',
+    };
+  }
+  console.log(requestStatus)
   return (
     <div className={styles.container}>
           <form className={styles.itemRegisterForm} onSubmit={submitHandler}>
@@ -117,6 +146,12 @@ const SerieForm: React.FC = () => {
                 <button className={styles.formButton} type='submit'> Confirmar </button>
               </div>
           </form>
+          {notification && 
+          <Notification
+            status={notification.status}
+            title={notification.title}
+            message={notification.message}
+          />}
         </div>
   );
 }
