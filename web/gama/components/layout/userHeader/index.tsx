@@ -4,35 +4,65 @@ import Link from 'next/link'
 import NavButton from '../../ui/button/NavButton';
 import styles from './styles.module.scss';
 import { useRouter } from 'next/router'
-import {signOut} from 'next-auth/client';
+import {signOut, useSession} from 'next-auth/client';
 import {FaUserAlt} from "react-icons/fa";
 import {FaCog} from "react-icons/fa";
 import {FaPlus} from "react-icons/fa";
+import {FaRegListAlt} from 'react-icons/fa';
 
-export default function UserHeader() {
+
+const UserHeader: React.FC = () => {
   const router = useRouter();
   const {user} = router.query;
   const itemRegisterURL = `/profile/${user}/itemRegister`;
+  const itemList = `/profile/${user}/items`;
+  const [session] = useSession();
+
   function logoutHandler(){
     signOut();
   }
+  
+
+
 
   return (
     
     <div className={styles.header}>
 
-      <section>
-        <Link href='/'>
+      {!session &&
+
+        <section>
+        
+          <a>
+            <Image
+              src="/img/Logo.png" width={110} height={31.5}
+              />
+          </a>
+      
+      </section>
+      }
+      
+      {session && 
+        <section>
+          <Link href={`/profile/${user}`}>
           <a>
             <Image
               src="/img/Logo.png" width={110} height={31.5}
               />
           </a>
         </Link>
-      </section>
-      
+        </section>}
+
       <nav>
         
+        <section>
+          <Link href={itemList}>
+            <a>
+            
+            <FaRegListAlt className={styles.buttonIcon}/>
+            </a>
+          </Link>
+        </section>
       
         <section>
           <Link href={itemRegisterURL}>
@@ -53,9 +83,11 @@ export default function UserHeader() {
 
         
         <section>
-          <a>  
-           <FaUserAlt className={styles.buttonIcon}/>
-          </a>
+          <Link href={`/profile/${user}`}>
+            <a>  
+            <FaUserAlt className={styles.buttonIcon}/>
+            </a>
+          </Link>
         </section>
 
         
@@ -70,3 +102,5 @@ export default function UserHeader() {
     
   )
 }
+
+export default UserHeader;
