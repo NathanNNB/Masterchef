@@ -8,9 +8,8 @@ export default function LoginForm() {
   const passwordInputRef = useRef(null);
   const router = useRouter();
   async function submitHandler(event){
-
     event.preventDefault();
-
+    
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
@@ -22,7 +21,6 @@ export default function LoginForm() {
     const path = (`/profile/${enteredEmail}`)
     router.push(path);
     console.log(result);
-
   }
 
   return (

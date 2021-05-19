@@ -19,6 +19,7 @@ const UserHeader: React.FC = () => {
   const [session] = useSession();
 
   function logoutHandler(){
+    router.push('/login')
     signOut();
   }
   

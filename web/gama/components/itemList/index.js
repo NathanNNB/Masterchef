@@ -30,11 +30,10 @@ export default function ItemList(){
 
   const listItems = items.map((item)=>
     <ItemTopic 
-      key={item._id}
       typeItem={item.typeItem}
       image={item.image}
       title={item.title}
-      link={`/profile/${user}/items/`}
+      link={`/profile/${user}/items/${item.typeItem}/${item.title}`}
     />  
   )
   

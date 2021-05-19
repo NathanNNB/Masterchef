@@ -32,6 +32,10 @@
     margin-bottom: 30px;
     @media(max-width:720px){
       width: 90%;
+      :nth-child(n){
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
   .buttons{
@@ -51,6 +55,7 @@
       flex-direction: column;
       height: 200px;
       padding-top: 10px;
+      width: 100%;
       :nth-child(n){
         margin-bottom: 3px;
         display: flex;
