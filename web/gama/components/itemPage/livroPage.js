@@ -30,7 +30,6 @@ export default function LivroPage() {
   const author = livroData.author
   const genre = livroData.genre
   
-  console.log(title)
   
   
   

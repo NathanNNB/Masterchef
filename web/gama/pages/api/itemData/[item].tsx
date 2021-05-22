@@ -10,7 +10,6 @@ async function itemList(req:NextApiRequest, res: NextApiResponse) {
   
     const db = client.db();
     const itemData = await db.collection('item').findOne({title: req.query.item})
-    console.log(itemData)
     res.status(200).json(itemData)
 
 }

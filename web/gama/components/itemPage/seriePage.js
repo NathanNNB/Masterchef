@@ -33,7 +33,6 @@ export default function SeriePage() {
   const seasons = serieData.seasons
   const genre = serieData.genre
   
-  console.log(title)
 
   return (
     <div className={styles.container}>

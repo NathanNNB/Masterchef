@@ -32,7 +32,6 @@ export default function FilmePage () {
   const duration = filmeData.duration
   const genre = filmeData.genre
   
-  console.log(title)
 
   
   return (

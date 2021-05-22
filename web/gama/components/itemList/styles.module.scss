@@ -31,6 +31,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     @media(max-width:720px){
+      margin-right: 50px;
       width: 90%;
       :nth-child(n){
         margin-right: auto;
